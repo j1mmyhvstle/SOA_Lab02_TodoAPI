@@ -1,0 +1,39 @@
+﻿//creates a variable that is used for all of the endpoints.
+@TodoApi_HostAddress = https://localhost:7281
+//markdown
+
+POST {{TodoApi_HostAddress}}/todoitems
+Content-Type: application/json
+{
+  "name": "mamamia",
+  "isComplete": true
+}
+###
+
+PUT {{TodoApi_HostAddress}}/todoitems/3 //markdown
+Content-Type: application/json
+{
+  "name": "feed fish",
+  "isComplete": true
+}
+###
+
+GET {{TodoApi_HostAddress}}/todoitems/complete
+###
+
+GET {{TodoApi_HostAddress}}/todoitems
+
+###
+
+@id=3
+GET {{TodoApi_HostAddress}}/todoitems/{{id}}
+
+###
+
+POST {{TodoApi_HostAddress}}/todoitems
+Content-Type: application/json
+{
+  "name": "water plants",
+  "isComplete": false
+}
+###
